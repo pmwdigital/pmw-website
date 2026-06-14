@@ -113,22 +113,22 @@ addUtilities({
     <canvas id="cursor-canvas" class="fixed inset-0 z-[9999] pointer-events-none"></canvas>
 
     <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 md:px-12 md:py-6 w-full max-w-[1800px] mx-auto bg-[#fdfdfc]/80 backdrop-blur-md transition-all duration-300 border-b border-transparent" id="navbar">
-        <a href="index.html" class="cursor-pointer hover:opacity-70 transition-opacity">
+        <a href="/" class="cursor-pointer hover:opacity-70 transition-opacity">
             <img src="pmw-logo.png" alt="PMW" class="h-[84px] md:h-[96px]" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <span class="text-xl font-semibold tracking-tight hidden">PMW</span>
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-neutral-600">
-            <a href="index.html#hizmetler" class="hover:text-black transition-colors" data-i18n="nav.services">Hizmetler</a>
-            <a href="projeler.html" class="text-black hover:text-black transition-colors" data-i18n="nav.projects">Projelerimiz</a>
-            <a href="index.html#surec" class="hover:text-black transition-colors" data-i18n="nav.process">Süreçler</a>
-            <a href="index.html#iletisim" class="hover:text-black transition-colors" data-i18n="nav.contact">İletişim</a>
+            <a href="/#hizmetler" class="hover:text-black transition-colors" data-i18n="nav.services">Hizmetler</a>
+            <a href="/projeler" class="text-black hover:text-black transition-colors" data-i18n="nav.projects">Projelerimiz</a>
+            <a href="/#surec" class="hover:text-black transition-colors" data-i18n="nav.process">Süreçler</a>
+            <a href="/#iletisim" class="hover:text-black transition-colors" data-i18n="nav.contact">İletişim</a>
         </div>
         <div class="flex items-center gap-4">
             <button id="lang-toggle" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-200 text-xs font-semibold text-neutral-600 hover:bg-neutral-100 transition-colors cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
                 <span id="lang-label">EN</span>
             </button>
-            <a href="index.html#iletisim" class="hidden md:block px-5 py-2.5 bg-neutral-900 text-white rounded-full text-xs font-semibold hover:bg-neutral-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-neutral-200/50" data-i18n="nav.cta">
+            <a href="/#iletisim" class="hidden md:block px-5 py-2.5 bg-neutral-900 text-white rounded-full text-xs font-semibold hover:bg-neutral-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-neutral-200/50" data-i18n="nav.cta">
                 PMW ile Tanışın
             </a>
             <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-neutral-200 hover:bg-neutral-100 transition-colors" aria-label="Menü">
@@ -139,15 +139,15 @@ addUtilities({
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#fdfdfc]/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden">
-        <a href="index.html#hizmetler" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.services">Hizmetler</a>
-        <a href="projeler.html" class="text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.projects">Projelerimiz</a>
-        <a href="index.html#surec" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.process">Süreçler</a>
-        <a href="index.html#iletisim" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.contact">İletişim</a>
+        <a href="/#hizmetler" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.services">Hizmetler</a>
+        <a href="/projeler" class="text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.projects">Projelerimiz</a>
+        <a href="/#surec" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.process">Süreçler</a>
+        <a href="/#iletisim" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.contact">İletişim</a>
         <button id="mobile-lang-toggle" class="flex items-center gap-1.5 px-4 py-2 rounded-full border border-neutral-200 text-sm font-semibold text-neutral-600 hover:bg-neutral-100 transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
             <span id="mobile-lang-label">EN</span>
         </button>
-        <a href="index.html#iletisim" class="mobile-menu-link mt-2 px-8 py-3.5 bg-neutral-900 text-white rounded-full text-sm font-semibold hover:bg-neutral-700 transition-colors" data-i18n="nav.cta">
+        <a href="/#iletisim" class="mobile-menu-link mt-2 px-8 py-3.5 bg-neutral-900 text-white rounded-full text-sm font-semibold hover:bg-neutral-700 transition-colors" data-i18n="nav.cta">
             PMW ile Tanışın
         </a>
     </div>
@@ -159,7 +159,7 @@ addUtilities({
             <div class="max-w-4xl reveal">
                 <div class="text-xs font-semibold tracking-widest text-neutral-500 uppercase mb-4" data-i18n="projects.label">Portföy</div>
                 <h1 class="md:text-7xl lg:text-8xl leading-[1.05] text-5xl font-semibold tracking-tighter mb-6" data-i18n="projects.title">Projelerimiz</h1>
-                <p class="text-lg md:text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed" data-i18n="projects.subtitle">CMS, ERP, web platformları, tasarım, brandkit, kriptografi, siber güvenlik, donanım ve yapay zeka alanlarında tamamladığımız projeler ve başarı hikayelerimiz.</p>
+                <p class="text-lg md:text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed" data-i18n="projects.subtitle">Kripto & DeFi, yapay zeka, web platformları, donanım, siber güvenlik ve altyapı alanlarında geliştirdiğimiz Wiener Labs projeleri ve ürünleri.</p>
             </div>
         </section>
 
@@ -169,15 +169,12 @@ addUtilities({
         <section class="mb-12 reveal">
             <div class="flex flex-wrap gap-3" id="filter-buttons">
                 <button onclick="filterProjects('all', this)" class="filter-btn px-5 py-2.5 bg-neutral-900 text-white rounded-full text-sm font-medium hover:bg-neutral-700 transition-all duration-300" data-i18n="filter.all">Tümü</button>
-                <button onclick="filterProjects('cms', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.cms">CMS</button>
-                <button onclick="filterProjects('erp', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.erp">ERP</button>
-                <button onclick="filterProjects('website', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.website">Website</button>
-                <button onclick="filterProjects('tasarim', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.tasarim">Tasarım</button>
-                <button onclick="filterProjects('brandkit', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.brandkit">Brandkit</button>
-                <button onclick="filterProjects('kriptografi', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.kriptografi">Kriptografi</button>
-                <button onclick="filterProjects('siber-guvenlik', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.siber">Siber Güvenlik</button>
-                <button onclick="filterProjects('donanim', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.donanim">Donanım</button>
+                <button onclick="filterProjects('kripto', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.kripto">Kripto &amp; DeFi</button>
                 <button onclick="filterProjects('yapay-zeka', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.yapayZeka">Yapay Zeka</button>
+                <button onclick="filterProjects('web', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.web">Web &amp; SaaS</button>
+                <button onclick="filterProjects('donanim', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.donanim">Donanım &amp; Sinyal</button>
+                <button onclick="filterProjects('siber', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.siber">Siber &amp; OSINT</button>
+                <button onclick="filterProjects('altyapi', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.altyapi">Altyapı &amp; DevTools</button>
             </div>
         </section>
 
@@ -185,18 +182,13 @@ addUtilities({
         <section class="mb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="project-grid">
 
-                <!-- CMS 1 -->
-                <a href="proje-detay.html?id=cms1" class="project-card group reveal" data-category="cms">
+                <!-- Cortex -->
+                <a href="/proje-detay?id=cortex" class="project-card group reveal" data-category="kripto">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">CMS</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">DeFi · AI</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cms1.title">MarkaHub CMS</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cms1.desc">Çok dilli ve çok markalı içerik yönetim platformu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cortex.title">Cortex</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cortex.desc">Solana üzerinde otonom yapay zeka destekli işlem botu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -205,18 +197,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- CMS 2 -->
-                <a href="proje-detay.html?id=cms2" class="project-card group reveal delay-100" data-category="cms">
+                <!-- Probity -->
+                <a href="/proje-detay?id=probity" class="project-card group reveal delay-100" data-category="kripto">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">CMS</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Solana</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cms2.title">E-Ticaret İçerik Sistemi</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cms2.desc">Ürün kataloğu, kampanya ve içerik yönetimi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.probity.title">Probity</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.probity.desc">Solana için helal varlık tarama ve attestation altyapısı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -225,18 +212,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- ERP 1 -->
-                <a href="proje-detay.html?id=erp1" class="project-card group reveal delay-200" data-category="erp">
+                <!-- Wienerpad -->
+                <a href="/proje-detay?id=wienerpad" class="project-card group reveal delay-200" data-category="kripto">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">ERP</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Launchpad</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.erp1.title">PMW Operations Suite</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.erp1.desc">Entegre operasyon ve tedarik zinciri yönetim platformu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerpad.title">Wienerpad</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerpad.desc">Futarşi tabanlı Solana token lansman platformu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -245,18 +227,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- ERP 2 -->
-                <a href="proje-detay.html?id=erp2" class="project-card group reveal" data-category="erp">
+                <!-- Wiener Launchpad -->
+                <a href="/proje-detay?id=launchpad" class="project-card group reveal" data-category="kripto">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">ERP</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SPL</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.erp2.title">Lisans Takip ERP</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.erp2.desc">Lisanslı ürün süreç ve onay yönetimi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.launchpad.title">Wiener Launchpad</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.launchpad.desc">Yeniden kullanılabilir Solana token lansman hattı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -265,18 +242,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Website 1 -->
-                <a href="proje-detay.html?id=web1" class="project-card group reveal delay-100" data-category="website">
+                <!-- Kuroshitsuji -->
+                <a href="/proje-detay?id=kuroshitsuji" class="project-card group reveal delay-100" data-category="yapay-zeka">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Website</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">AI Agent</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.web1.title">Kurumsal Web Platformu</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.web1.desc">Responsive ve performans odaklı kurumsal web sitesi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.kuroshitsuji.title">Kuroshitsuji</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.kuroshitsuji.desc">Telegram öncelikli çoklu-ajan yapay zeka platformu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -285,18 +257,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Website 2 -->
-                <a href="proje-detay.html?id=web2" class="project-card group reveal delay-200" data-category="website">
+                <!-- Magnesium -->
+                <a href="/proje-detay?id=magnesium" class="project-card group reveal delay-200" data-category="yapay-zeka">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Website</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Orchestration</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.web2.title">Koleksiyon Vitrini</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.web2.desc">Ürün koleksiyonları için interaktif tanıtım sitesi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.magnesium.title">Magnesium</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.magnesium.desc">Opus 4.8 etrafında çoklu-ajan orkestrasyon harness</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -305,18 +272,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Website 3 -->
-                <a href="proje-detay.html?id=web3" class="project-card group reveal" data-category="website">
+                <!-- Prowl -->
+                <a href="/proje-detay?id=prowl" class="project-card group reveal" data-category="yapay-zeka">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Website</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Mobile AI</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.web3.title">Fan Experience Portal</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.web3.desc">Taraftar etkileşim ve deneyim platformu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.prowl.title">Prowl</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.prowl.desc">Gen Z için mobil-native yapay zeka kazanç ajanı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -325,18 +287,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Tasarım 1 -->
-                <a href="proje-detay.html?id=design1" class="project-card group reveal delay-100" data-category="tasarim">
+                <!-- Mirage -->
+                <a href="/proje-detay?id=mirage" class="project-card group reveal delay-100" data-category="yapay-zeka">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.tasarim">Tasarım</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Content AI</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.design1.title">Spor Koleksiyonu Tasarımı</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.design1.desc">Lisanslı spor ürünleri marka tasarımı</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.mirage.title">Mirage</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.mirage.desc">Dubai pazarı için yapay zeka içerik stüdyosu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -345,18 +302,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Tasarım 2 -->
-                <a href="proje-detay.html?id=design2" class="project-card group reveal delay-200" data-category="tasarim">
+                <!-- Wevent -->
+                <a href="/proje-detay?id=wevent" class="project-card group reveal delay-200" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.tasarim">Tasarım</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Marketplace</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.design2.title">Kurumsal Kimlik Sistemi</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.design2.desc">360° marka kimliği ve görsel dil sistemi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wevent.title">Wevent</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wevent.desc">Türkiye için etkinlik bileti pazaryeri</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -365,18 +317,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Tasarım 3 -->
-                <a href="proje-detay.html?id=design3" class="project-card group reveal" data-category="tasarim">
+                <!-- Wiener Clock -->
+                <a href="/proje-detay?id=wienerclock" class="project-card group reveal" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"></path><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path><path d="M2 7h20"></path><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.tasarim">Tasarım</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SaaS</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.design3.title">Mağaza Deneyim Tasarımı</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.design3.desc">Perakende mağaza konsept ve iç mekan tasarımı</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerclock.title">Wiener Clock</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerclock.desc">Türkçe arayüzlü kurumsal zaman takip aracı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -385,18 +332,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Brandkit 1 -->
-                <a href="proje-detay.html?id=brand1" class="project-card group reveal delay-100" data-category="brandkit">
+                <!-- Livâ-i İslâm -->
+                <a href="/proje-detay?id=terakki" class="project-card group reveal delay-100" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Brandkit</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Yayıncılık</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.brand1.title">PMW Brand Guidelines</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.brand1.desc">Kapsamlı marka kullanım ve uygulama kılavuzu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.terakki.title">Livâ-i İslâm</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.terakki.desc">Ghost tabanlı editöryel yayın platformu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -405,18 +347,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Brandkit 2 -->
-                <a href="proje-detay.html?id=brand2" class="project-card group reveal delay-200" data-category="brandkit">
+                <!-- WISA -->
+                <a href="/proje-detay?id=wisa" class="project-card group reveal delay-200" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" x2="12" y1="22" y2="12"></line></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Brandkit</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Landing</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.brand2.title">Dijital Varlık Paketi</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.brand2.desc">Sosyal medya, sunum ve dijital iletişim şablonları</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wisa.title">WISA</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wisa.desc">Scroll-tahrikli futbol temalı tanıtım sayfası</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -425,18 +362,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Kriptografi 1 -->
-                <a href="proje-detay.html?id=crypto1" class="project-card group reveal" data-category="kriptografi">
+                <!-- Mobiguard -->
+                <a href="/proje-detay?id=mobiguard" class="project-card group reveal" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.kriptografi">Kriptografi</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Canlı</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.crypto1.title">SecureVault Şifreleme Motoru</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.crypto1.desc">Uçtan uca AES-256 tabanlı veri şifreleme ve anahtar yönetim sistemi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.mobiguard.title">Mobiguard</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.mobiguard.desc">Konya yüzey/mobilya kaplama pazarlama sitesi</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -445,18 +377,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Kriptografi 2 -->
-                <a href="proje-detay.html?id=crypto2" class="project-card group reveal delay-100" data-category="kriptografi">
+                <!-- D&D VTT -->
+                <a href="/proje-detay?id=dndvtt" class="project-card group reveal delay-100" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m9 12 2 2 4-4"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.kriptografi">Kriptografi</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">VTT</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.crypto2.title">Blockchain Kimlik Doğrulama</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.crypto2.desc">Dağıtık defter teknolojisi ile dijital kimlik doğrulama altyapısı</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.dndvtt.title">D&amp;D 5e VTT</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.dndvtt.desc">Türkçe arayüzlü sanal masa üstü (VTT)</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -465,18 +392,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Siber Güvenlik 1 -->
-                <a href="proje-detay.html?id=cyber1" class="project-card group reveal delay-200" data-category="siber-guvenlik">
+                <!-- OppoLink -->
+                <a href="/proje-detay?id=oppolink" class="project-card group reveal delay-200" data-category="donanim">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.siber">Siber Güvenlik</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">BLE Voice</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cyber1.title">SOC Tehdit İzleme Platformu</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cyber1.desc">7/24 gerçek zamanlı tehdit algılama ve olay müdahale sistemi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.oppolink.title">OppoLink</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.oppolink.desc">BLE üzerinden tam-çift-yönlü şifreli ses</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -485,18 +407,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Siber Güvenlik 2 -->
-                <a href="proje-detay.html?id=cyber2" class="project-card group reveal" data-category="siber-guvenlik">
+                <!-- softlock -->
+                <a href="/proje-detay?id=softlock" class="project-card group reveal" data-category="donanim">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><rect width="20" height="14" x="2" y="3" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path><path d="m6 8 2 2-2 2"></path><path d="M12 12h4"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.siber">Siber Güvenlik</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SDR/DSP</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cyber2.title">Penetrasyon Test Otomasyon</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cyber2.desc">Otomatik zafiyet tarama ve sızma testi raporlama platformu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.softlock.title">softlock</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.softlock.desc">Sıfırdan SDR/DSP demodülasyon laboratuvarı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -505,18 +422,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Donanım 1 -->
-                <a href="proje-detay.html?id=hw1" class="project-card group reveal delay-100" data-category="donanim">
+                <!-- Rorschach -->
+                <a href="/proje-detay?id=rorschach" class="project-card group reveal delay-100" data-category="siber">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.donanim">Donanım</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">OSINT</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.hw1.title">IoT Gateway Cihaz Tasarımı</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.hw1.desc">Endüstriyel IoT için özel PCB ve gömülü sistem geliştirme</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.rorschach.title">Rorschach</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.rorschach.desc">Türkiye odaklı OSINT veri toplama platformu</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -525,18 +437,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Donanım 2 -->
-                <a href="proje-detay.html?id=hw2" class="project-card group reveal delay-200" data-category="donanim">
+                <!-- xqtc -->
+                <a href="/proje-detay?id=xqtc" class="project-card group reveal delay-200" data-category="siber">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.donanim">Donanım</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Scraper</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.hw2.title">Sensör Ağ Monitör Sistemi</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.hw2.desc">Dağıtık sensör ağlarının gerçek zamanlı izleme ve yönetim paneli</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.xqtc.title">xqtc</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.xqtc.desc">X alıntı-tweet toplayıcı ve oEmbed vitrini</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -545,18 +452,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Yapay Zeka 1 -->
-                <a href="proje-detay.html?id=ai1" class="project-card group reveal" data-category="yapay-zeka">
+                <!-- WienerEnvoy -->
+                <a href="/proje-detay?id=wienerenvoy" class="project-card group reveal" data-category="altyapi">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.yapayZeka">Yapay Zeka</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Home Server</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.ai1.title">AI Görüntü Analiz Platformu</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.ai1.desc">Derin öğrenme tabanlı görüntü sınıflandırma ve nesne tanıma sistemi</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerenvoy.title">WienerEnvoy</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerenvoy.desc">Mac mini ev sunucusu kontrol düzlemi</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -565,18 +467,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Yapay Zeka 2 -->
-                <a href="proje-detay.html?id=ai2" class="project-card group reveal delay-100" data-category="yapay-zeka">
+                <!-- WienerLog -->
+                <a href="/proje-detay?id=wienerlog" class="project-card group reveal delay-100" data-category="altyapi">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative flex items-center justify-center overflow-hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/20 w-24 h-24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path></svg>
-                            <div class="absolute top-4 left-4">
-                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full" data-i18n="filter.yapayZeka">Yapay Zeka</span>
-                            </div>
-                        </div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">DevTool</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.ai2.title">NLP Chatbot Asistan</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.ai2.desc">Doğal dil işleme ile müşteri destek ve satış otomasyonu</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerlog.title">WienerLog</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerlog.desc">Aktivite-bilinçli görev sentezi motoru</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -596,8 +493,8 @@ addUtilities({
                     <h2 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter leading-none mb-8" data-i18n="projects.cta.title" data-i18n-html="true">Projeniz İçin<br>Bize Ulaşın.</h2>
                     <p class="text-neutral-400 text-lg md:text-xl mb-10 max-w-lg leading-relaxed" data-i18n="projects.cta.desc">Bir sonraki projenizi birlikte hayata geçirelim. Strateji, tasarım ve teknoloji bir arada.</p>
                     <div class="flex flex-col md:flex-row items-center gap-4 w-full justify-center">
-                         <a href="index.html#iletisim" class="px-10 py-4 bg-white text-black rounded-full text-base font-bold hover:bg-neutral-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] min-w-[200px] text-center" data-i18n="projects.cta.quote">Teklif Alın</a>
-                        <a href="index.html#iletisim" class="px-10 py-4 bg-transparent border border-neutral-700 text-white rounded-full text-base font-semibold hover:border-white transition-all duration-300 min-w-[200px] text-center" data-i18n="projects.cta.contact">Bize Ulaşın</a>
+                         <a href="/#iletisim" class="px-10 py-4 bg-white text-black rounded-full text-base font-bold hover:bg-neutral-200 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] min-w-[200px] text-center" data-i18n="projects.cta.quote">Teklif Alın</a>
+                        <a href="/#iletisim" class="px-10 py-4 bg-transparent border border-neutral-700 text-white rounded-full text-base font-semibold hover:border-white transition-all duration-300 min-w-[200px] text-center" data-i18n="projects.cta.contact">Bize Ulaşın</a>
                     </div>
                 </div>
             </div>
@@ -623,9 +520,9 @@ addUtilities({
                     </a>
                 </div>
                 <div class="flex flex-wrap gap-8 text-sm font-medium text-neutral-500">
-                    <a href="gizlilik.html" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.privacy">Gizlilik Politikası</a>
-                    <a href="kullanim-kosullari.html" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.terms">Kullanım Koşulları</a>
-                    <a href="kariyer.html" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.careers">Kariyer</a>
+                    <a href="/gizlilik" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                    <a href="/kullanim-kosullari" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.terms">Kullanım Koşulları</a>
+                    <a href="/kariyer" class="hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black hover:after:w-full after:transition-all" data-i18n="footer.careers">Kariyer</a>
                 </div>
                 <div class="text-sm font-medium text-neutral-400" data-i18n="footer.copy">&copy; 2026 PMW. Tüm hakları saklıdır.</div>
             </div>
@@ -725,58 +622,58 @@ addUtilities({
         const translations = {
             tr: {
                 'nav.services':'Hizmetler','nav.projects':'Projelerimiz','nav.process':'Süreçler','nav.contact':'İletişim','nav.cta':'PMW ile Tanışın',
-                'projects.label':'Portföy','projects.title':'Projelerimiz','projects.subtitle':'CMS, ERP, web platformları, tasarım, brandkit, kriptografi, siber güvenlik, donanım ve yapay zeka alanlarında tamamladığımız projeler ve başarı hikayelerimiz.',
-                'filter.all':'Tümü','filter.cms':'CMS','filter.erp':'ERP','filter.website':'Website','filter.tasarim':'Tasarım','filter.brandkit':'Brandkit','filter.kriptografi':'Kriptografi','filter.siber':'Siber Güvenlik','filter.donanim':'Donanım','filter.yapayZeka':'Yapay Zeka',
+                'projects.label':'Portföy','projects.title':'Projelerimiz','projects.subtitle':'Kripto & DeFi, yapay zeka, web platformları, donanım, siber güvenlik ve altyapı alanlarında geliştirdiğimiz Wiener Labs projeleri ve ürünleri.',
+                'filter.all':'Tümü','filter.kripto':'Kripto & DeFi','filter.yapayZeka':'Yapay Zeka','filter.web':'Web & SaaS','filter.donanim':'Donanım & Sinyal','filter.siber':'Siber & OSINT','filter.altyapi':'Altyapı & DevTools',
                 'project.detail':'Detay',
-                'project.cms1.title':'MarkaHub CMS','project.cms1.desc':'Çok dilli ve çok markalı içerik yönetim platformu',
-                'project.cms2.title':'E-Ticaret İçerik Sistemi','project.cms2.desc':'Ürün kataloğu, kampanya ve içerik yönetimi',
-                'project.erp1.title':'PMW Operations Suite','project.erp1.desc':'Entegre operasyon ve tedarik zinciri yönetim platformu',
-                'project.erp2.title':'Lisans Takip ERP','project.erp2.desc':'Lisanslı ürün süreç ve onay yönetimi',
-                'project.web1.title':'Kurumsal Web Platformu','project.web1.desc':'Responsive ve performans odaklı kurumsal web sitesi',
-                'project.web2.title':'Koleksiyon Vitrini','project.web2.desc':'Ürün koleksiyonları için interaktif tanıtım sitesi',
-                'project.web3.title':'Fan Experience Portal','project.web3.desc':'Taraftar etkileşim ve deneyim platformu',
-                'project.design1.title':'Spor Koleksiyonu Tasarımı','project.design1.desc':'Lisanslı spor ürünleri marka tasarımı',
-                'project.design2.title':'Kurumsal Kimlik Sistemi','project.design2.desc':'360° marka kimliği ve görsel dil sistemi',
-                'project.design3.title':'Mağaza Deneyim Tasarımı','project.design3.desc':'Perakende mağaza konsept ve iç mekan tasarımı',
-                'project.brand1.title':'PMW Brand Guidelines','project.brand1.desc':'Kapsamlı marka kullanım ve uygulama kılavuzu',
-                'project.brand2.title':'Dijital Varlık Paketi','project.brand2.desc':'Sosyal medya, sunum ve dijital iletişim şablonları',
-                'project.crypto1.title':'SecureVault Şifreleme Motoru','project.crypto1.desc':'Uçtan uca AES-256 tabanlı veri şifreleme ve anahtar yönetim sistemi',
-                'project.crypto2.title':'Blockchain Kimlik Doğrulama','project.crypto2.desc':'Dağıtık defter teknolojisi ile dijital kimlik doğrulama altyapısı',
-                'project.cyber1.title':'SOC Tehdit İzleme Platformu','project.cyber1.desc':'7/24 gerçek zamanlı tehdit algılama ve olay müdahale sistemi',
-                'project.cyber2.title':'Penetrasyon Test Otomasyon','project.cyber2.desc':'Otomatik zafiyet tarama ve sızma testi raporlama platformu',
-                'project.hw1.title':'IoT Gateway Cihaz Tasarımı','project.hw1.desc':'Endüstriyel IoT için özel PCB ve gömülü sistem geliştirme',
-                'project.hw2.title':'Sensör Ağ Monitör Sistemi','project.hw2.desc':'Dağıtık sensör ağlarının gerçek zamanlı izleme ve yönetim paneli',
-                'project.ai1.title':'AI Görüntü Analiz Platformu','project.ai1.desc':'Derin öğrenme tabanlı görüntü sınıflandırma ve nesne tanıma sistemi',
-                'project.ai2.title':'NLP Chatbot Asistan','project.ai2.desc':'Doğal dil işleme ile müşteri destek ve satış otomasyonu',
+                'project.cortex.title':'Cortex','project.cortex.desc':'Solana üzerinde otonom yapay zeka destekli işlem botu',
+                'project.probity.title':'Probity','project.probity.desc':'Solana için helal varlık tarama ve attestation altyapısı',
+                'project.wienerpad.title':'Wienerpad','project.wienerpad.desc':'Futarşi tabanlı Solana token lansman platformu',
+                'project.launchpad.title':'Wiener Launchpad','project.launchpad.desc':'Yeniden kullanılabilir Solana token lansman hattı',
+                'project.kuroshitsuji.title':'Kuroshitsuji','project.kuroshitsuji.desc':'Telegram öncelikli çoklu-ajan yapay zeka platformu',
+                'project.magnesium.title':'Magnesium','project.magnesium.desc':'Opus 4.8 etrafında çoklu-ajan orkestrasyon harness',
+                'project.prowl.title':'Prowl','project.prowl.desc':'Gen Z için mobil-native yapay zeka kazanç ajanı',
+                'project.mirage.title':'Mirage','project.mirage.desc':'Dubai pazarı için yapay zeka içerik stüdyosu',
+                'project.wevent.title':'Wevent','project.wevent.desc':'Türkiye için etkinlik bileti pazaryeri',
+                'project.wienerclock.title':'Wiener Clock','project.wienerclock.desc':'Türkçe arayüzlü kurumsal zaman takip aracı',
+                'project.terakki.title':'Livâ-i İslâm','project.terakki.desc':'Ghost tabanlı editöryel yayın platformu',
+                'project.wisa.title':'WISA','project.wisa.desc':'Scroll-tahrikli futbol temalı tanıtım sayfası',
+                'project.mobiguard.title':'Mobiguard','project.mobiguard.desc':'Konya yüzey/mobilya kaplama pazarlama sitesi',
+                'project.dndvtt.title':'D&D 5e VTT','project.dndvtt.desc':'Türkçe arayüzlü sanal masa üstü (VTT)',
+                'project.oppolink.title':'OppoLink','project.oppolink.desc':'BLE üzerinden tam-çift-yönlü şifreli ses',
+                'project.softlock.title':'softlock','project.softlock.desc':'Sıfırdan SDR/DSP demodülasyon laboratuvarı',
+                'project.rorschach.title':'Rorschach','project.rorschach.desc':'Türkiye odaklı OSINT veri toplama platformu',
+                'project.xqtc.title':'xqtc','project.xqtc.desc':'X alıntı-tweet toplayıcı ve oEmbed vitrini',
+                'project.wienerenvoy.title':'WienerEnvoy','project.wienerenvoy.desc':'Mac mini ev sunucusu kontrol düzlemi',
+                'project.wienerlog.title':'WienerLog','project.wienerlog.desc':'Aktivite-bilinçli görev sentezi motoru',
                 'projects.cta.title':'Projeniz \u0130\u00e7in<br>Bize Ula\u015f\u0131n.','projects.cta.desc':'Bir sonraki projenizi birlikte hayata geçirelim. Strateji, tasarım ve teknoloji bir arada.',
                 'projects.cta.quote':'Teklif Alın','projects.cta.contact':'Bize Ulaşın',
                 'footer.privacy':'Gizlilik Politikası','footer.terms':'Kullanım Koşulları','footer.careers':'Kariyer','footer.copy':'© 2026 PMW. Tüm hakları saklıdır.'
             },
             en: {
                 'nav.services':'Services','nav.projects':'Projects','nav.process':'Process','nav.contact':'Contact','nav.cta':'Meet PMW',
-                'projects.label':'Portfolio','projects.title':'Our Projects','projects.subtitle':'Our completed projects and success stories across CMS, ERP, web platforms, design, brandkit, cryptography, cyber security, hardware and artificial intelligence.',
-                'filter.all':'All','filter.cms':'CMS','filter.erp':'ERP','filter.website':'Website','filter.tasarim':'Design','filter.brandkit':'Brandkit','filter.kriptografi':'Cryptography','filter.siber':'Cyber Security','filter.donanim':'Hardware','filter.yapayZeka':'AI',
+                'projects.label':'Portfolio','projects.title':'Our Projects','projects.subtitle':'Wiener Labs projects and products we build across crypto & DeFi, AI, web platforms, hardware, cyber security and infrastructure.',
+                'filter.all':'All','filter.kripto':'Crypto & DeFi','filter.yapayZeka':'AI','filter.web':'Web & SaaS','filter.donanim':'Hardware & Signal','filter.siber':'Cyber & OSINT','filter.altyapi':'Infra & DevTools',
                 'project.detail':'Details',
-                'project.cms1.title':'MarkaHub CMS','project.cms1.desc':'Multi-language and multi-brand content management platform',
-                'project.cms2.title':'E-Commerce Content System','project.cms2.desc':'Product catalog, campaign and content management',
-                'project.erp1.title':'PMW Operations Suite','project.erp1.desc':'Integrated operations and supply chain management platform',
-                'project.erp2.title':'License Tracking ERP','project.erp2.desc':'Licensed product process and approval management',
-                'project.web1.title':'Corporate Web Platform','project.web1.desc':'Responsive and performance-focused corporate website',
-                'project.web2.title':'Collection Showcase','project.web2.desc':'Interactive showcase site for product collections',
-                'project.web3.title':'Fan Experience Portal','project.web3.desc':'Fan engagement and experience platform',
-                'project.design1.title':'Sports Collection Design','project.design1.desc':'Licensed sports products brand design',
-                'project.design2.title':'Corporate Identity System','project.design2.desc':'360\u00b0 brand identity and visual language system',
-                'project.design3.title':'Store Experience Design','project.design3.desc':'Retail store concept and interior design',
-                'project.brand1.title':'PMW Brand Guidelines','project.brand1.desc':'Comprehensive brand usage and application guide',
-                'project.brand2.title':'Digital Asset Package','project.brand2.desc':'Social media, presentation and digital communication templates',
-                'project.crypto1.title':'SecureVault Encryption Engine','project.crypto1.desc':'End-to-end AES-256 based data encryption and key management system',
-                'project.crypto2.title':'Blockchain Identity Verification','project.crypto2.desc':'Digital identity verification infrastructure with distributed ledger technology',
-                'project.cyber1.title':'SOC Threat Monitoring Platform','project.cyber1.desc':'24/7 real-time threat detection and incident response system',
-                'project.cyber2.title':'Penetration Test Automation','project.cyber2.desc':'Automated vulnerability scanning and penetration test reporting platform',
-                'project.hw1.title':'IoT Gateway Device Design','project.hw1.desc':'Custom PCB and embedded system development for industrial IoT',
-                'project.hw2.title':'Sensor Network Monitor System','project.hw2.desc':'Real-time monitoring and management panel for distributed sensor networks',
-                'project.ai1.title':'AI Image Analysis Platform','project.ai1.desc':'Deep learning based image classification and object recognition system',
-                'project.ai2.title':'NLP Chatbot Assistant','project.ai2.desc':'Customer support and sales automation with natural language processing',
+                'project.cortex.title':'Cortex','project.cortex.desc':'Autonomous AI-driven trading bot on Solana',
+                'project.probity.title':'Probity','project.probity.desc':'Halal asset screening and attestation for Solana',
+                'project.wienerpad.title':'Wienerpad','project.wienerpad.desc':'Futarchy-based Solana token launchpad',
+                'project.launchpad.title':'Wiener Launchpad','project.launchpad.desc':'Reusable Solana token launch pipeline',
+                'project.kuroshitsuji.title':'Kuroshitsuji','project.kuroshitsuji.desc':'Telegram-first multi-agent AI platform',
+                'project.magnesium.title':'Magnesium','project.magnesium.desc':'Multi-agent orchestration harness around Opus 4.8',
+                'project.prowl.title':'Prowl','project.prowl.desc':'Mobile-native AI hustle agent for Gen Z',
+                'project.mirage.title':'Mirage','project.mirage.desc':'AI content studio for the Dubai market',
+                'project.wevent.title':'Wevent','project.wevent.desc':'Event ticketing marketplace for Turkey',
+                'project.wienerclock.title':'Wiener Clock','project.wienerclock.desc':'Turkish-language internal time tracker',
+                'project.terakki.title':'Livâ-i İslâm','project.terakki.desc':'Ghost-based editorial publishing platform',
+                'project.wisa.title':'WISA','project.wisa.desc':'Scroll-driven football-themed landing page',
+                'project.mobiguard.title':'Mobiguard','project.mobiguard.desc':'Konya surface/furniture coating marketing site',
+                'project.dndvtt.title':'D&D 5e VTT','project.dndvtt.desc':'Turkish-language virtual tabletop (VTT)',
+                'project.oppolink.title':'OppoLink','project.oppolink.desc':'Full-duplex encrypted voice over BLE',
+                'project.softlock.title':'softlock','project.softlock.desc':'Build-it-yourself SDR/DSP demod lab',
+                'project.rorschach.title':'Rorschach','project.rorschach.desc':'Turkey-focused OSINT data collection platform',
+                'project.xqtc.title':'xqtc','project.xqtc.desc':'X quote-tweet collector and oEmbed showcase',
+                'project.wienerenvoy.title':'WienerEnvoy','project.wienerenvoy.desc':'Mac mini home server control plane',
+                'project.wienerlog.title':'WienerLog','project.wienerlog.desc':'Activity-aware task synthesis engine',
                 'projects.cta.title':'Contact Us<br>For Your Project.','projects.cta.desc':'Let\u0027s bring your next project to life together. Strategy, design and technology combined.',
                 'projects.cta.quote':'Get a Quote','projects.cta.contact':'Contact Us',
                 'footer.privacy':'Privacy Policy','footer.terms':'Terms of Use','footer.careers':'Careers','footer.copy':'\u00a9 2026 PMW. All rights reserved.'
