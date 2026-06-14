@@ -156,6 +156,7 @@ addUtilities({
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-neutral-600">
             <a href="#infrastructure" class="hover:text-black transition-colors" data-i18n="nav.services">Infrastructure</a>
+            <a href="/projeler" class="hover:text-black transition-colors" data-i18n="nav.portfolio">Projects</a>
             <a href="#engagement" class="hover:text-black transition-colors" data-i18n="nav.projects">Case Study</a>
             <a href="#model" class="hover:text-black transition-colors" data-i18n="nav.process">Operating Model</a>
             <a href="#contact" class="hover:text-black transition-colors" data-i18n="nav.contact">Contact</a>
@@ -177,6 +178,7 @@ addUtilities({
 
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#fdfdfc]/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden">
         <a href="#infrastructure" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.services">Infrastructure</a>
+        <a href="/projeler" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.portfolio">Projects</a>
         <a href="#engagement" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.projects">Case Study</a>
         <a href="#model" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.process">Operating Model</a>
         <a href="#contact" class="mobile-menu-link text-3xl font-semibold tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors" data-i18n="nav.contact">Contact</a>
@@ -755,7 +757,7 @@ addUtilities({
         let currentLang = localStorage.getItem('pmw-lang') || 'en';
         const translations = {
             en: {
-                'nav.services':'Infrastructure','nav.projects':'Case Study','nav.process':'Operating Model','nav.contact':'Contact','nav.cta':'Contact Us',
+                'nav.services':'Infrastructure','nav.portfolio':'Projects','nav.projects':'Case Study','nav.process':'Operating Model','nav.contact':'Contact','nav.cta':'Contact Us',
                 'hero.title':'Integrated Brand<br>Infrastructure for<br>Sport, Fashion<br>&amp; Institutions','hero.subtitle':'PMW designs and operates licensed merchandise ecosystems, curated retail systems, and secure digital infrastructure through a unified operational model.','hero.tagline':'Creative at heart. Operational by design. Engineered for scale.','hero.cta':'Explore Our Work','hero.cta2':'Contact Us',
                 'card.label':'Active Project','card.title':'Licensed Collection Launch','card.status':'In Production','card.delivery':'Delivery: 2 weeks','card.progress':'Progress',
                 'platform.title':'Centralized<br>Execution Model','platform.desc':'PMW integrates creative, production, and digital workflows into a centralized execution model.','platform.quote':'We operate as a system integrator, not a supplier.','platform.tab1':'Creative','platform.tab2':'Production','platform.tab3':'Digital','platform.status':'System Status','platform.season':'2026 Season','platform.completed':'Completed Projects','platform.explore':'Explore Infrastructure',
@@ -769,7 +771,7 @@ addUtilities({
                 'footer.privacy':'Privacy Policy','footer.terms':'Terms of Use','footer.careers':'Careers','footer.copy':'© 2026 PMW. All rights reserved.'
             },
             tr: {
-                'nav.services':'Altyapı','nav.projects':'Vaka Çalışması','nav.process':'Operasyon Modeli','nav.contact':'İletişim','nav.cta':'Bize Ulaşın',
+                'nav.services':'Altyapı','nav.portfolio':'Projelerimiz','nav.projects':'Vaka Çalışması','nav.process':'Operasyon Modeli','nav.contact':'İletişim','nav.cta':'Bize Ulaşın',
                 'hero.title':'Spor, Moda ve<br>Kurumsal Markalar<br>İçin Entegre<br>Marka Altyapısı','hero.subtitle':'PMW, lisanslı ürün ekosistemleri, küratörlü perakende sistemleri ve güvenli dijital altyapıyı birleşik bir operasyonel model ile tasarlar ve yönetir.','hero.tagline':'Yaratıcılık özünde. Operasyon tasarımında. Ölçek mühendisliğinde.','hero.cta':'Çalışmalarımızı Keşfet','hero.cta2':'Bize Ulaşın',
                 'card.label':'Aktif Proje','card.title':'Lisanslı Koleksiyon Lansmanı','card.status':'Üretimde','card.delivery':'Teslim: 2 hafta','card.progress':'İlerleme',
                 'platform.title':'Merkezi<br>Yürütme Modeli','platform.desc':'PMW, yaratıcı, üretim ve dijital iş akışlarını merkezi bir yürütme modelinde birleştirir.','platform.quote':'Tedarikçi değil, sistem entegratörü olarak çalışıyoruz.','platform.tab1':'Yaratıcı','platform.tab2':'Üretim','platform.tab3':'Dijital','platform.status':'Sistem Durumu','platform.season':'2026 Sezonu','platform.completed':'Tamamlanan Proje','platform.explore':'Altyapıyı Keşfet',
