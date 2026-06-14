@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pmw.com/sitemap.xml
+Sitemap: https://pmw.digital/sitemap.xml
 
