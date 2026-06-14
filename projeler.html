@@ -172,9 +172,10 @@ addUtilities({
                 <button onclick="filterProjects('kripto', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.kripto">Kripto &amp; DeFi</button>
                 <button onclick="filterProjects('yapay-zeka', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.yapayZeka">Yapay Zeka</button>
                 <button onclick="filterProjects('web', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.web">Web &amp; SaaS</button>
+                <button onclick="filterProjects('erp', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.erp">ERP</button>
                 <button onclick="filterProjects('donanim', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.donanim">Donanım &amp; Sinyal</button>
                 <button onclick="filterProjects('siber', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.siber">Siber &amp; OSINT</button>
-                <button onclick="filterProjects('altyapi', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.altyapi">Altyapı &amp; DevTools</button>
+                <button onclick="filterProjects('altyapi', this)" class="filter-btn px-5 py-2.5 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 transition-all duration-300" data-i18n="filter.altyapi">Altyapı &amp; Güvenlik</button>
             </div>
         </section>
 
@@ -182,58 +183,13 @@ addUtilities({
         <section class="mb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="project-grid">
 
-                <!-- Cortex -->
-                <a href="/proje-detay?id=cortex" class="project-card group reveal" data-category="kripto">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">DeFi · AI</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cortex.title">Cortex</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cortex.desc">Solana üzerinde otonom yapay zeka destekli işlem botu</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
                 <!-- Probity -->
-                <a href="/proje-detay?id=probity" class="project-card group reveal delay-100" data-category="kripto">
+                <a href="/proje-detay?id=probity" class="project-card group reveal" data-category="kripto">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Solana</span></div></div>
                         <div class="p-6">
                             <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.probity.title">Probity</h3>
                             <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.probity.desc">Solana için helal varlık tarama ve attestation altyapısı</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Wienerpad -->
-                <a href="/proje-detay?id=wienerpad" class="project-card group reveal delay-200" data-category="kripto">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Launchpad</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerpad.title">Wienerpad</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerpad.desc">Futarşi tabanlı Solana token lansman platformu</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Wiener Launchpad -->
-                <a href="/proje-detay?id=launchpad" class="project-card group reveal" data-category="kripto">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SPL</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.launchpad.title">Wiener Launchpad</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.launchpad.desc">Yeniden kullanılabilir Solana token lansman hattı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -317,38 +273,8 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- Wiener Clock -->
-                <a href="/proje-detay?id=wienerclock" class="project-card group reveal" data-category="web">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SaaS</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerclock.title">Wiener Clock</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerclock.desc">Türkçe arayüzlü kurumsal zaman takip aracı</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Livâ-i İslâm -->
-                <a href="/proje-detay?id=terakki" class="project-card group reveal delay-100" data-category="web">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Yayıncılık</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.terakki.title">Livâ-i İslâm</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.terakki.desc">Ghost tabanlı editöryel yayın platformu</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
                 <!-- WISA -->
-                <a href="/proje-detay?id=wisa" class="project-card group reveal delay-200" data-category="web">
+                <a href="/proje-detay?id=wisa" class="project-card group reveal" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Landing</span></div></div>
                         <div class="p-6">
@@ -363,7 +289,7 @@ addUtilities({
                 </a>
 
                 <!-- Mobiguard -->
-                <a href="/proje-detay?id=mobiguard" class="project-card group reveal" data-category="web">
+                <a href="/proje-detay?id=mobiguard" class="project-card group reveal delay-100" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Canlı</span></div></div>
                         <div class="p-6">
@@ -377,8 +303,8 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- D&D VTT -->
-                <a href="/proje-detay?id=dndvtt" class="project-card group reveal delay-100" data-category="web">
+                <!-- D&amp;D 5e VTT -->
+                <a href="/proje-detay?id=dndvtt" class="project-card group reveal delay-200" data-category="web">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">VTT</span></div></div>
                         <div class="p-6">
@@ -392,8 +318,23 @@ addUtilities({
                     </div>
                 </a>
 
+                <!-- CuisinOS -->
+                <a href="/proje-detay?id=cuisinos" class="project-card group reveal" data-category="erp">
+                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">ERP</span></div></div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.cuisinos.title">CuisinOS</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.cuisinos.desc">Yapay zeka destekli kurumsal restoran yönetim platformu</p>
+                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
+                                <span data-i18n="project.detail">Detay</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
                 <!-- OppoLink -->
-                <a href="/proje-detay?id=oppolink" class="project-card group reveal delay-200" data-category="donanim">
+                <a href="/proje-detay?id=oppolink" class="project-card group reveal delay-100" data-category="donanim">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">BLE Voice</span></div></div>
                         <div class="p-6">
@@ -408,7 +349,7 @@ addUtilities({
                 </a>
 
                 <!-- softlock -->
-                <a href="/proje-detay?id=softlock" class="project-card group reveal" data-category="donanim">
+                <a href="/proje-detay?id=softlock" class="project-card group reveal delay-200" data-category="donanim">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">SDR/DSP</span></div></div>
                         <div class="p-6">
@@ -423,7 +364,7 @@ addUtilities({
                 </a>
 
                 <!-- Rorschach -->
-                <a href="/proje-detay?id=rorschach" class="project-card group reveal delay-100" data-category="siber">
+                <a href="/proje-detay?id=rorschach" class="project-card group reveal" data-category="siber">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">OSINT</span></div></div>
                         <div class="p-6">
@@ -438,7 +379,7 @@ addUtilities({
                 </a>
 
                 <!-- xqtc -->
-                <a href="/proje-detay?id=xqtc" class="project-card group reveal delay-200" data-category="siber">
+                <a href="/proje-detay?id=xqtc" class="project-card group reveal delay-100" data-category="siber">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Scraper</span></div></div>
                         <div class="p-6">
@@ -452,28 +393,13 @@ addUtilities({
                     </div>
                 </a>
 
-                <!-- WienerEnvoy -->
-                <a href="/proje-detay?id=wienerenvoy" class="project-card group reveal" data-category="altyapi">
+                <!-- zk-lokomotive -->
+                <a href="/proje-detay?id=zklambda" class="project-card group reveal delay-200" data-category="altyapi">
                     <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Home Server</span></div></div>
+                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">Zero-Knowledge</span></div></div>
                         <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerenvoy.title">WienerEnvoy</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerenvoy.desc">Mac mini ev sunucusu kontrol düzlemi</p>
-                            <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
-                                <span data-i18n="project.detail">Detay</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- WienerLog -->
-                <a href="/proje-detay?id=wienerlog" class="project-card group reveal delay-100" data-category="altyapi">
-                    <div class="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                        <div class="h-48 bg-gradient-to-br from-neutral-900 to-black relative overflow-hidden"><div class="absolute top-4 left-4"><span class="px-3 py-1 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold rounded-full">DevTool</span></div></div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.wienerlog.title">WienerLog</h3>
-                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.wienerlog.desc">Aktivite-bilinçli görev sentezi motoru</p>
+                            <h3 class="text-lg font-semibold tracking-tight mb-2 group-hover:text-neutral-500 transition-colors" data-i18n="project.zklambda.title">zk-lokomotive</h3>
+                            <p class="text-sm text-neutral-500 leading-relaxed mb-4" data-i18n="project.zklambda.desc">Güvenli dosya transferi için sıfır-bilgi kriptografik altyapı</p>
                             <div class="flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:gap-3 transition-all duration-300">
                                 <span data-i18n="project.detail">Detay</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -623,28 +549,23 @@ addUtilities({
             tr: {
                 'nav.services':'Hizmetler','nav.projects':'Projelerimiz','nav.process':'Süreçler','nav.contact':'İletişim','nav.cta':'PMW ile Tanışın',
                 'projects.label':'Portföy','projects.title':'Projelerimiz','projects.subtitle':'Kripto & DeFi, yapay zeka, web platformları, donanım, siber güvenlik ve altyapı alanlarında geliştirdiğimiz Wiener Labs projeleri ve ürünleri.',
-                'filter.all':'Tümü','filter.kripto':'Kripto & DeFi','filter.yapayZeka':'Yapay Zeka','filter.web':'Web & SaaS','filter.donanim':'Donanım & Sinyal','filter.siber':'Siber & OSINT','filter.altyapi':'Altyapı & DevTools',
+                'filter.all':'Tümü','filter.kripto':'Kripto & DeFi','filter.yapayZeka':'Yapay Zeka','filter.web':'Web & SaaS','filter.erp':'ERP','filter.donanim':'Donanım & Sinyal','filter.siber':'Siber & OSINT','filter.altyapi':'Altyapı & Güvenlik',
                 'project.detail':'Detay',
-                'project.cortex.title':'Cortex','project.cortex.desc':'Solana üzerinde otonom yapay zeka destekli işlem botu',
                 'project.probity.title':'Probity','project.probity.desc':'Solana için helal varlık tarama ve attestation altyapısı',
-                'project.wienerpad.title':'Wienerpad','project.wienerpad.desc':'Futarşi tabanlı Solana token lansman platformu',
-                'project.launchpad.title':'Wiener Launchpad','project.launchpad.desc':'Yeniden kullanılabilir Solana token lansman hattı',
                 'project.kuroshitsuji.title':'Kuroshitsuji','project.kuroshitsuji.desc':'Telegram öncelikli çoklu-ajan yapay zeka platformu',
                 'project.magnesium.title':'Magnesium','project.magnesium.desc':'Opus 4.8 etrafında çoklu-ajan orkestrasyon harness',
                 'project.prowl.title':'Prowl','project.prowl.desc':'Gen Z için mobil-native yapay zeka kazanç ajanı',
                 'project.mirage.title':'Mirage','project.mirage.desc':'Dubai pazarı için yapay zeka içerik stüdyosu',
                 'project.wevent.title':'Wevent','project.wevent.desc':'Türkiye için etkinlik bileti pazaryeri',
-                'project.wienerclock.title':'Wiener Clock','project.wienerclock.desc':'Türkçe arayüzlü kurumsal zaman takip aracı',
-                'project.terakki.title':'Livâ-i İslâm','project.terakki.desc':'Ghost tabanlı editöryel yayın platformu',
                 'project.wisa.title':'WISA','project.wisa.desc':'Scroll-tahrikli futbol temalı tanıtım sayfası',
                 'project.mobiguard.title':'Mobiguard','project.mobiguard.desc':'Konya yüzey/mobilya kaplama pazarlama sitesi',
                 'project.dndvtt.title':'D&D 5e VTT','project.dndvtt.desc':'Türkçe arayüzlü sanal masa üstü (VTT)',
+                'project.cuisinos.title':'CuisinOS','project.cuisinos.desc':'Yapay zeka destekli kurumsal restoran yönetim platformu',
                 'project.oppolink.title':'OppoLink','project.oppolink.desc':'BLE üzerinden tam-çift-yönlü şifreli ses',
                 'project.softlock.title':'softlock','project.softlock.desc':'Sıfırdan SDR/DSP demodülasyon laboratuvarı',
                 'project.rorschach.title':'Rorschach','project.rorschach.desc':'Türkiye odaklı OSINT veri toplama platformu',
                 'project.xqtc.title':'xqtc','project.xqtc.desc':'X alıntı-tweet toplayıcı ve oEmbed vitrini',
-                'project.wienerenvoy.title':'WienerEnvoy','project.wienerenvoy.desc':'Mac mini ev sunucusu kontrol düzlemi',
-                'project.wienerlog.title':'WienerLog','project.wienerlog.desc':'Aktivite-bilinçli görev sentezi motoru',
+                'project.zklambda.title':'zk-lokomotive','project.zklambda.desc':'Güvenli dosya transferi için sıfır-bilgi kriptografik altyapı',
                 'projects.cta.title':'Projeniz \u0130\u00e7in<br>Bize Ula\u015f\u0131n.','projects.cta.desc':'Bir sonraki projenizi birlikte hayata geçirelim. Strateji, tasarım ve teknoloji bir arada.',
                 'projects.cta.quote':'Teklif Alın','projects.cta.contact':'Bize Ulaşın',
                 'footer.privacy':'Gizlilik Politikası','footer.terms':'Kullanım Koşulları','footer.careers':'Kariyer','footer.copy':'© 2026 PMW. Tüm hakları saklıdır.'
@@ -652,28 +573,23 @@ addUtilities({
             en: {
                 'nav.services':'Services','nav.projects':'Projects','nav.process':'Process','nav.contact':'Contact','nav.cta':'Meet PMW',
                 'projects.label':'Portfolio','projects.title':'Our Projects','projects.subtitle':'Wiener Labs projects and products we build across crypto & DeFi, AI, web platforms, hardware, cyber security and infrastructure.',
-                'filter.all':'All','filter.kripto':'Crypto & DeFi','filter.yapayZeka':'AI','filter.web':'Web & SaaS','filter.donanim':'Hardware & Signal','filter.siber':'Cyber & OSINT','filter.altyapi':'Infra & DevTools',
+                'filter.all':'All','filter.kripto':'Crypto & DeFi','filter.yapayZeka':'AI','filter.web':'Web & SaaS','filter.erp':'ERP','filter.donanim':'Hardware & Signal','filter.siber':'Cyber & OSINT','filter.altyapi':'Infra & Security',
                 'project.detail':'Details',
-                'project.cortex.title':'Cortex','project.cortex.desc':'Autonomous AI-driven trading bot on Solana',
                 'project.probity.title':'Probity','project.probity.desc':'Halal asset screening and attestation for Solana',
-                'project.wienerpad.title':'Wienerpad','project.wienerpad.desc':'Futarchy-based Solana token launchpad',
-                'project.launchpad.title':'Wiener Launchpad','project.launchpad.desc':'Reusable Solana token launch pipeline',
                 'project.kuroshitsuji.title':'Kuroshitsuji','project.kuroshitsuji.desc':'Telegram-first multi-agent AI platform',
                 'project.magnesium.title':'Magnesium','project.magnesium.desc':'Multi-agent orchestration harness around Opus 4.8',
                 'project.prowl.title':'Prowl','project.prowl.desc':'Mobile-native AI hustle agent for Gen Z',
                 'project.mirage.title':'Mirage','project.mirage.desc':'AI content studio for the Dubai market',
                 'project.wevent.title':'Wevent','project.wevent.desc':'Event ticketing marketplace for Turkey',
-                'project.wienerclock.title':'Wiener Clock','project.wienerclock.desc':'Turkish-language internal time tracker',
-                'project.terakki.title':'Livâ-i İslâm','project.terakki.desc':'Ghost-based editorial publishing platform',
                 'project.wisa.title':'WISA','project.wisa.desc':'Scroll-driven football-themed landing page',
                 'project.mobiguard.title':'Mobiguard','project.mobiguard.desc':'Konya surface/furniture coating marketing site',
                 'project.dndvtt.title':'D&D 5e VTT','project.dndvtt.desc':'Turkish-language virtual tabletop (VTT)',
+                'project.cuisinos.title':'CuisinOS','project.cuisinos.desc':'AI-powered enterprise restaurant management platform',
                 'project.oppolink.title':'OppoLink','project.oppolink.desc':'Full-duplex encrypted voice over BLE',
                 'project.softlock.title':'softlock','project.softlock.desc':'Build-it-yourself SDR/DSP demod lab',
                 'project.rorschach.title':'Rorschach','project.rorschach.desc':'Turkey-focused OSINT data collection platform',
                 'project.xqtc.title':'xqtc','project.xqtc.desc':'X quote-tweet collector and oEmbed showcase',
-                'project.wienerenvoy.title':'WienerEnvoy','project.wienerenvoy.desc':'Mac mini home server control plane',
-                'project.wienerlog.title':'WienerLog','project.wienerlog.desc':'Activity-aware task synthesis engine',
+                'project.zklambda.title':'zk-lokomotive','project.zklambda.desc':'Zero-knowledge cryptographic infrastructure for secure file transfers',
                 'projects.cta.title':'Contact Us<br>For Your Project.','projects.cta.desc':'Let\u0027s bring your next project to life together. Strategy, design and technology combined.',
                 'projects.cta.quote':'Get a Quote','projects.cta.contact':'Contact Us',
                 'footer.privacy':'Privacy Policy','footer.terms':'Terms of Use','footer.careers':'Careers','footer.copy':'\u00a9 2026 PMW. All rights reserved.'
