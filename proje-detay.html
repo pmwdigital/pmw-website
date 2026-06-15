@@ -78,18 +78,25 @@ tailwind.config = {
 
     <main class="md:px-8 w-full max-w-[1800px] mt-24 mr-auto ml-auto pr-4 pb-20 pl-4">
         <section class="pt-10 md:pt-20 pb-12 relative">
-            <div class="max-w-4xl reveal">
+            <div class="reveal">
                 <a href="/projeler" class="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-black transition-colors mb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
                     <span data-i18n="back">T&#252;m Projeler</span>
                 </a>
-                <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 bg-neutral-900 text-white text-xs font-semibold rounded-full" id="project-badge"></span></div>
-                <h1 class="md:text-7xl lg:text-8xl leading-[1.05] text-5xl font-semibold tracking-tighter mb-6" id="project-title"></h1>
-                <p class="text-lg md:text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed" id="project-desc"></p>
-                <a id="project-website" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-neutral-900 text-white rounded-full text-sm font-semibold hover:bg-neutral-700 hover:scale-105 transition-all duration-300 w-fit" style="display:none">
-                    <span data-i18n="visit.site">Web Sitesi</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-                </a>
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
+                    <div class="max-w-4xl">
+                        <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 bg-neutral-900 text-white text-xs font-semibold rounded-full" id="project-badge"></span></div>
+                        <h1 class="md:text-7xl lg:text-8xl leading-[1.05] text-5xl font-semibold tracking-tighter mb-6" id="project-title"></h1>
+                        <p class="text-lg md:text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed" id="project-desc"></p>
+                        <a id="project-website" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-neutral-900 text-white rounded-full text-sm font-semibold hover:bg-neutral-700 hover:scale-105 transition-all duration-300 w-fit" style="display:none">
+                            <span data-i18n="visit.site">Web Sitesi</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                        </a>
+                    </div>
+                    <div id="project-logo-wrap" class="shrink-0 h-28 w-28 md:h-40 md:w-40 rounded-3xl bg-neutral-900 flex items-center justify-center ring-1 ring-white/10 shadow-lg" style="display:none">
+                        <img id="project-logo" src="" alt="" class="max-h-[72%] max-w-[72%] object-contain rounded-xl" onerror="var w=document.getElementById('project-logo-wrap'); if(w){w.style.display='none';}">
+                    </div>
+                </div>
             </div>
         </section>
         <div class="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent my-12 opacity-50"></div>
@@ -179,6 +186,9 @@ tailwind.config = {
             document.getElementById('project-overview-p2').textContent = d.overview2;
             var ws = document.getElementById('project-website');
             if (project.url) { ws.href = project.url; ws.style.display = 'inline-flex'; } else { ws.style.display = 'none'; }
+            var logoImg = document.getElementById('project-logo');
+            var logoWrap = document.getElementById('project-logo-wrap');
+            if (logoImg && logoWrap) { logoImg.src = 'logos/' + projectId + '.jpg'; logoImg.alt = d.title + ' logosu'; logoWrap.style.display = 'flex'; }
 
             // Stats - built using DOM methods for safety
             var statsEl = document.getElementById('project-stats');
