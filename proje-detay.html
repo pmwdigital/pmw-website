@@ -86,6 +86,10 @@ tailwind.config = {
                 <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 bg-neutral-900 text-white text-xs font-semibold rounded-full" id="project-badge"></span></div>
                 <h1 class="md:text-7xl lg:text-8xl leading-[1.05] text-5xl font-semibold tracking-tighter mb-6" id="project-title"></h1>
                 <p class="text-lg md:text-xl text-neutral-600 max-w-2xl font-medium leading-relaxed" id="project-desc"></p>
+                <a id="project-website" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 bg-neutral-900 text-white rounded-full text-sm font-semibold hover:bg-neutral-700 hover:scale-105 transition-all duration-300 w-fit" style="display:none">
+                    <span data-i18n="visit.site">Web Sitesi</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+                </a>
             </div>
         </section>
         <div class="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent my-12 opacity-50"></div>
@@ -173,6 +177,8 @@ tailwind.config = {
             document.getElementById('project-desc').textContent = d.desc;
             document.getElementById('project-overview-p1').textContent = d.overview1;
             document.getElementById('project-overview-p2').textContent = d.overview2;
+            var ws = document.getElementById('project-website');
+            if (project.url) { ws.href = project.url; ws.style.display = 'inline-flex'; } else { ws.style.display = 'none'; }
 
             // Stats - built using DOM methods for safety
             var statsEl = document.getElementById('project-stats');
