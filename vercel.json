@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/projeler", "destination": "/", "permanent": false },
+    { "source": "/proje-detay", "destination": "/", "permanent": false }
+  ]
 }
