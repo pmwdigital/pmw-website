@@ -556,10 +556,6 @@ addUtilities({
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-neutral-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                             <a href="mailto:contact@pmw.digital" class="hover:text-black transition-colors">contact@pmw.digital</a>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-neutral-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <a href="mailto:partnerships@pmw.digital" class="hover:text-black transition-colors">partnerships@pmw.digital</a>
-                        </div>
                     </div>
                 </div>
                 <div>
@@ -707,6 +703,43 @@ addUtilities({
 
         const contactForm = document.getElementById('contact-form');
         const formSuccess = document.getElementById('form-success');
+        const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+        async function sendContactForm(name, email, message, lang) {
+            const company = contactForm.querySelector('[name="company"]');
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const label = btn.textContent;
+            formSuccess.classList.add('hidden');
+            function openMailto() {
+                const subject = encodeURIComponent('PMW website – iletişim mesajı');
+                const body = encodeURIComponent((lang === 'tr' ? 'Ad: ' : 'Name: ') + name.value.trim() + '  |  E-posta: ' + email.value.trim() + (company && company.value.trim() ? '  |  ' + company.value.trim() : '') + '  ||  ' + message.value.trim());
+                window.location.href = 'mailto:contact@pmw.digital?subject=' + subject + '&body=' + body;
+                formSuccess.className = 'text-green-600 text-sm font-medium py-2';
+                formSuccess.textContent = lang === 'tr' ? 'E-posta uygulamanız açıldı; göndermek için Gönder butonuna basın.' : 'Your email app has opened; press Send to complete.';
+                formSuccess.classList.remove('hidden');
+            }
+            const configured = WEB3FORMS_ACCESS_KEY && !WEB3FORMS_ACCESS_KEY.startsWith('YOUR_');
+            if (!configured) { openMailto(); return; }
+            btn.disabled = true;
+            btn.textContent = lang === 'tr' ? 'Gönderiliyor...' : 'Sending...';
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ access_key: WEB3FORMS_ACCESS_KEY, subject: 'PMW website – yeni iletişim mesajı', from_name: 'PMW Website', name: name.value.trim(), email: email.value.trim(), company: company ? company.value.trim() : '', message: message.value.trim() })
+                });
+                const data = await res.json();
+                if (!data.success) throw new Error(data.message || 'failed');
+                formSuccess.className = 'text-green-600 text-sm font-medium py-2';
+                formSuccess.textContent = lang === 'tr' ? 'Mesajınız başarıyla gönderildi!' : 'Your message has been sent successfully!';
+                contactForm.reset();
+                formSuccess.classList.remove('hidden');
+            } catch (err) {
+                openMailto();
+            } finally {
+                btn.disabled = false;
+                btn.textContent = label;
+            }
+        }
         function showError(input, msg) { input.classList.add('border-red-500'); input.classList.remove('border-neutral-300'); const err = input.parentElement.querySelector('.form-error'); if (err) { err.textContent = msg; err.classList.remove('hidden'); } }
         function clearError(input) { input.classList.remove('border-red-500'); input.classList.add('border-neutral-300'); const err = input.parentElement.querySelector('.form-error'); if (err) { err.textContent = ''; err.classList.add('hidden'); } }
         contactForm.addEventListener('submit', (e) => {
@@ -716,7 +749,7 @@ addUtilities({
             if (!name.value.trim() || name.value.trim().length < 2) { showError(name, lang === 'tr' ? 'Ad en az 2 karakter olmalı.' : 'Name must be at least 2 characters.'); valid = false; }
             if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { showError(email, lang === 'tr' ? 'Geçerli bir e-posta girin.' : 'Enter a valid email address.'); valid = false; }
             if (!message.value.trim() || message.value.trim().length < 10) { showError(message, lang === 'tr' ? 'Mesaj en az 10 karakter olmalı.' : 'Message must be at least 10 characters.'); valid = false; }
-            if (valid) { formSuccess.textContent = lang === 'tr' ? 'Mesajınız başarıyla gönderildi!' : 'Your message has been sent successfully!'; formSuccess.classList.remove('hidden'); contactForm.reset(); }
+            if (valid) { sendContactForm(name, email, message, lang); }
         });
         contactForm.querySelectorAll('input, textarea').forEach(el => { el.addEventListener('input', () => clearError(el)); });
 
